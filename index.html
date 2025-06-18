@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador en Reversa</title>
+    <title>Cuanto le queda a la vieja?</title>
     <style>
         body {
             display: flex;
@@ -12,40 +12,38 @@
             height: 100vh;
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #282c34;
+            background: url('./images/background.webp') no-repeat center center fixed;
+            background-size: cover;
             color: white;
             text-align: center;
         }
-        #countdown {
-            font-size: 3rem;
+        h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
         }
+        #countdown {
+            font-size: 30px;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+            font-size: 32px;
+            }
+            #countdown {
+            font-size: 18px;
+            }
+        }
+        
+        
+        
     </style>
 </head>
 <body>
     <div>
-        <h1>Cuenta regresiva al 17 de junio de 2031</h1>
+        <h1>Condena CFK</h1>
         <div id="countdown"></div>
+        <script src="./script.js"></script>
     </div>
-
-    <script>
-        function updateCountdown() {
-            const targetDate = new Date(June 17, 2031 00:00:00);
-            const currentDate = new Date();
-
-            const totalSeconds = Math.floor((targetDate - currentDate) / 1000);
-
-            const days = Math.floor(totalSeconds / 3600 / 24);
-            const hours = Math.floor((totalSeconds / 3600) % 24);
-            const minutes = Math.floor((totalSeconds / 60) % 60);
-            const seconds = Math.floor(totalSeconds % 60);
-
-            document.getElementById(countdown).textContent = 
-                `${days} días, ${hours} horas, ${minutes} minutos, ${seconds} segundos`;
-        }
-
-        updateCountdown();
-        setInterval(updateCountdown, 1000);
-    </script>
 </body>
 </html>
 
